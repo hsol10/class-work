@@ -1,0 +1,31 @@
+
+x = 0
+
+def setup():
+    size(640, 480)
+
+
+def draw():
+    global x
+    
+    if x >= 640:
+        x = 0
+    x += 1
+    
+    background(175, 206, 250)
+
+    noStroke()
+    fill("#a7c44c")
+    ellipse(width/2, height, 800, 150)
+    fill("#FFD650")
+    ellipse(0, 0, 300, 300)
+    fill("#ffffff")
+    ellipse(x, height/3.5, 60, 50)
+    ellipse(x+20, height/4, 50, 50)
+    ellipse(x-30, height/4, 80, 50)
+    ellipse(x-20, height/4.5, 50, 60)
+    fill("#e58767")
+    rect(470, 360, 90, 100)
+    fill('#663c2e')
+    triangle(453, 380, 579, 380, 515, 310)
+

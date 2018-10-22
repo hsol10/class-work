@@ -1,5 +1,10 @@
-
 x = 0
+smoke_x = 530
+smoke_y = 320
+smoke1 = 5
+smoke2 = 5
+
+
 
 def setup():
     size(640, 480)
@@ -7,25 +12,64 @@ def setup():
 
 def draw():
     global x
+    global smoke_x
+    global smoke_y
+    global smoke1
+    global smoke2
     
-    if x >= 640:
-        x = 0
+    if x >= 780:
+        x = -100
     x += 1
-    
-    background(175, 206, 250)
 
+    background(175, 206, 250)
+    if smoke_x >= 750 and smoke_y <= 400 and smoke1 >= 40 and smoke2 >= 40:
+        smoke_x = 550
+        smoke_y = 310
+        smoke1 = 10
+        smoke2 = 10
+    smoke_x += 0.5
+    smoke_y -= 0.5
+    smoke1 += 0.1
+    smoke2 += 0.1
     noStroke()
+    fill("#ffffff")
+    ellipse( smoke_x , smoke_y, smoke1, smoke2)
+    ellipse( smoke_x - 30 , smoke_y + 30 , smoke1 -11.8, smoke2 -11.8)
+    ellipse( smoke_x - 60 , smoke_y + 60 , smoke1 -16.6, smoke2 -16.6)
+    
     fill("#a7c44c")
     ellipse(width/2, height, 800, 150)
+    
     fill("#FFD650")
     ellipse(0, 0, 300, 300)
+    
     fill("#ffffff")
-    ellipse(x, height/3.5, 60, 50)
-    ellipse(x+20, height/4, 50, 50)
-    ellipse(x-30, height/4, 80, 50)
-    ellipse(x-20, height/4.5, 50, 60)
+    ellipse(x-40, height/3.5, 60, 50)
+    ellipse(x-20, height/4, 50, 50)
+    ellipse(x-70, height/4, 80, 50)
+    ellipse(x-60, height/4.5, 50, 60)
+    
+    ellipse(x+30, height/5.5, 60, 50)
+    ellipse(x+40, height/6, 50, 50)
+    ellipse(x+70, height/6, 80, 50)
+    ellipse(x+60, height/6.5, 50, 60)
+    
     fill("#e58767")
     rect(470, 360, 90, 100)
+    rect(530, 320, 20, 40)
+    
     fill('#663c2e')
     triangle(453, 380, 579, 380, 515, 310)
-
+    rect(490, 425, 20, 35)
+    
+    fill("#e9f7ff")
+    strokeWeight(2)
+    
+    stroke("#663c2e")
+    rect(520, 390, 30, 45)
+    rect(535, 390, 1, 45)
+    rect(520, 412, 30, 1)
+    noStroke()
+    
+    fill("#ffdfad")
+    ellipse(495, 440, 7, 7)

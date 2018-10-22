@@ -19,7 +19,7 @@ def draw():
     
     if x >= 780:
         x = -100
-    x += 1
+    x += 0.5
 
     background(175, 206, 250)
     if smoke_x >= 750 and smoke_y <= 400 and smoke1 >= 40 and smoke2 >= 40:

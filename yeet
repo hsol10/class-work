@@ -37,6 +37,26 @@ def draw():
     ellipse( smoke_x - 30 , smoke_y + 30 , smoke1 -11.8, smoke2 -11.8)
     ellipse( smoke_x - 60 , smoke_y + 60 , smoke1 -16.6, smoke2 -16.6)
     
+    fill("#699F4D")
+    ellipse(width, height, 800, 200)
+    
+    fill("#82B650")
+    ellipse(width/8, height, 800, 300)
+    
+    fill("#735D41")
+    rect(60, 305, 50, 60)
+    rect(98, 280, 10, 20)
+    fill("#354246")
+    triangle(50, 315, 120, 315, 85, 270)
+    rect(70, 345, 10, 20)
+    stroke("#354246")
+    strokeWeight(1.5)
+    fill("#DCF0F7")
+    rect(85, 325, 20, 25)
+    rect(95, 325, 1, 25)
+    rect(85, 337, 20, 1)
+    
+    noStroke()
     fill("#a7c44c")
     ellipse(width/2, height, 800, 150)
     

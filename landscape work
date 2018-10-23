@@ -45,9 +45,9 @@ def draw():
     
     fill("#735D41")
     rect(60, 305, 50, 60)
-    rect(98, 280, 10, 20)
+    rect(98, 285, 10, 20)
     fill("#354246")
-    triangle(50, 315, 120, 315, 85, 270)
+    triangle(50, 315, 120, 315, 85, 280)
     rect(70, 345, 10, 20)
     stroke("#354246")
     strokeWeight(1.5)
@@ -93,3 +93,6 @@ def draw():
     
     fill("#ffdfad")
     ellipse(495, 440, 7, 7)
+
+    textSize(17);
+    text("this is the sun", 15, 20); 
